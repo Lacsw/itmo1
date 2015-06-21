@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Unicode</title>
+<script src="../jquery-2.1.4.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    	$('#unic').on('click',function(){
+    		var n = $("#Start").val();
+    		var m = $("#Finish").val();
+    		$('#res1').load( "/Task41?N="+n+"&M="+m);
+    	});
+    	$('#unic1').on('click',function(){
+    		var n = $("#Min").val();
+    		var m = $("#Max").val();
+    		$('#res2').load( "/Task42?N="+n+"&M="+m);
+    	});
+    });
+    </script>
+</head>
+<body>
+	<table>
+		<tr>
+			<th height="100px"><h1>
+					<font color="#1946ba">Unicode</font>
+				</h1></th>
+		</tr>
+		<tr>
+			<td valign="top">
+			<form>
+			<div>
+			    1. Введите два числа в промежутке от 0 до 65535 (рекомендуется вводить значения с разницей не более 1000). В браузер буду выведены символы в кодировке Unicode в заданном промежутке в виде таблицы.
+   				<hr>
+    		    <input type="text" id="Start" placeholder="Начало">
+   				<input type="text" id="Finish" placeholder="Конец">
+    			<input type="button" id="unic" value="Вывести">
+       			<hr>
+    			<span id="res1"></span>
+    		</div>
+    		</form>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+			<form>
+			<div>
+			    2. Введите два числа в промежутке от 0 до 65535 (рекомендуется вводить значения с разницей не более 1000). В браузер буду выведены символы в кодировке Unicode в заданном промежутке в виде таблицы. Кроме символа ниже будет выводиться его целочисленное значение, а ещё ниже – значение в шестнадцатиричной форме.
+   				<hr>
+    		    <input type="text" id="Min" placeholder="Начало">
+   				<input type="text" id="Max" placeholder="Конец">
+    			<input type="button" id="unic1" value="Вывести">
+    			<hr>
+    			<span id="res2"></span>
+    		</div>
+    		</form>			
+			</td>
+		</tr>		
+		<tr>
+			<td height="30px" align="center"><a href="../index.html"><font
+					color="#1946ba">На главную</font></a></td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Arrays</title>
+<script src="../jquery-2.1.4.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    	$('#around10').on('click',function(){
+    		var n = $("#Nnumb").val();
+    		var m = $("#Mnumb").val();
+	   		$('#res1').load( "/Task31?N="+n+"&M="+m);
+    	});
+    	$('#equation').on('click',function(){
+    		var a = $("#Anumb").val();
+    		var b = $("#Bnumb").val();
+    		var c = $("#Cnumb").val();
+    		$('#res2').load( "/Task32?A="+a+"&B="+b+"&C="+c);
+    	});
+        $('#array1').on('click',function(){
+        	$('#res3').load( "/Task33");
+        }); 
+        $('#array2').on('click',function(){
+        	$('#res4').load( "/Task34");
+        });   		
+    });
+    </script>
+
+</head>
+<body>
+	<table>
+		<tr>
+			<th height="100px"><h1>
+					<font color="#1946ba">Синтаксис Java и массивы</font></h1></th>
+		</tr>
+		<tr>
+			<td height="100px" valign="top">
+			<form>
+			<div>
+			    1. Введите два числа. Будет определено и выведено ближайшее к 10. Например, среди чисел 8.5 и 11.45 ближайшее к десяти 11.45
+   				<hr>
+    		    <input type="text" id="Nnumb" placeholder="Число 1">
+  				<input type="text" id="Mnumb" placeholder="Число 2">
+    			<input type="button" id="around10" value="Сравнить">
+       			<hr>
+    			<span id="res1"></span>
+    		</div>
+    		</form>
+			</td>
+		</tr>
+		<tr>
+			<td height="100px" valign="top">
+			<form>
+			<div>
+			    2. Введите коэффициенты a,b и c квадратного уравнения, чтобы получить его корни или узнать, что данное уравнение не имеет корней
+   				<hr>
+    		    <input type="text" id="Anumb" placeholder="a" style="width:33px"> x<sup>2</sup> +
+   				<input type="text" id="Bnumb" placeholder="b" style="width:33px"> x+
+    			<input type="text" id="Cnumb" placeholder="c" style="width:33px"> =0
+    			<input type="button" id="equation" value="Решить">
+    			<hr>
+    			<span id="res2"></span>
+    		</div>
+    		</form>			
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+			<form>
+			<div>
+			    3. Получить двумерный массив из 8 строк по 5 столбцов в каждой из случайных целых чисел из отрезка [10;99]
+   				<hr>
+    		    <input type="button" id="array1" value="Получить">
+       			<hr>
+    			<span id="res3"></span>
+    		</div>
+    		</form>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+			<form>
+			<div>
+			    4. Получить двумерный массив из 5 строк по 8 столбцов в каждой из случайных целых чисел из отрезка [-99;99]. А также узнать, какой элемент массива является минимальным, а какой максимальным 
+   				<hr>
+    			<input type="button" id="array2" value="Получить">
+    			<hr>
+    			<span id="res4"></span>
+    		</div>
+    		</form>			
+			</td>
+		</tr>				
+		<tr>
+			<td height="30px" align="center"><a href="../index.html"><font
+					color="#1946ba">На главную</font></a></td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Исключения, проверка на строку</title>
+<meta http-equiv="Content-Type" content="text/html;charset=windows-1251">
+<script src="jquery-2.1.4.min.js"></script>
+<script>
+	$(function() {
+		$('#show').click(
+				function() {
+					var inputNum1 = $('#inputNum1').val();
+					$('#result').load(
+							"/FifthThird?inputNum1=" + inputNum1);
+				});
+	});
+</script>
+</head>
+<body>
+	<table class="main">
+		<tr>
+			<td>
+				<form>
+					<p>Пароль: qwerty</p>
+					<p><input id="inputNum1" type="text" /></p>
+				</form>
+				<button id="show">Ок</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>
+					<span id="result"></span>
+				</p>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
